@@ -1,12 +1,12 @@
 import random
 
 options = ("rock" ,"paper" ,"scissor")
+
 name = input("Enter your name: ")
 player = None
 
 is_running = True
-
-while True:
+while is_running :
     computer = random.choice(options)
     player = input("Enter your choice[rock,paper,scissor]: ")
     print(f"player: {player}")
@@ -29,5 +29,11 @@ while True:
     else:
         print("INVALID INPUT BY PLAYER")
     
-    print(f"THANKS FOR PLAYING {name}")
+
+    X = input("you want to play again? ")
+    if X == "no":
+        is_running = False
+        print(f"THANKS FOR PLAYING {name}")
+    else:
+        is_running = True
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
